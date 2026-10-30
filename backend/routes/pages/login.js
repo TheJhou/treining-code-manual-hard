@@ -2,8 +2,9 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const pool = require("../../database/connection");
 const router = express.Router();
+const rateLimit = require("../../middleware/rateLimit");
 
-router.post("/api/login", async (req, res) => {
+router.post("/api/login", rateLimit, async (req, res) => {
     const { usuarioInput, senhaInput } = req.body || {};
 
     if (typeof usuarioInput !== "string" || typeof senhaInput !== "string") {
