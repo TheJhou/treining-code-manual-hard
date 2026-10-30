@@ -8,7 +8,8 @@ router.get("/", (req, res) => {
     res.redirect("/Login.html");
 });
 
-router.use(require("./home"));     // mesma pasta → ./home
+router.use(require("./home"));
 router.use(require("./login"));
+router.use(require("./registro"));
 
 module.exports = router;
