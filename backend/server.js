@@ -12,8 +12,9 @@ app.use(session({
     secret: "segredo_super_secreto",
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false } // Defina como true se estiver usando HTTPS
+    cookie: { secure: false }
 }));
+
 
 app.use(require("./routes/pages/index"));
 app.use(express.static(path.join(__dirname, "..", "frontend")));
