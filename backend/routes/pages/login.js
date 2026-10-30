@@ -1,6 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
-const pool = require("../database/connection");
+const pool = require("../../database/connection");
 const router = express.Router();
 
 router.post("/api/login", async (req, res) => {

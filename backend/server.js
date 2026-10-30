@@ -15,8 +15,7 @@ app.use(session({
     cookie: { secure: false } // Defina como true se estiver usando HTTPS
 }));
 
-app.use(require("./routes/login"));
-app.use(require("./routes/home"));
+app.use(require("./routes/pages/index"));
 app.use(express.static(path.join(__dirname, "..", "frontend")));
 
 
